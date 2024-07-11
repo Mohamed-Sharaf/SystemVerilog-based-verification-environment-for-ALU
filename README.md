@@ -63,7 +63,7 @@ Runs the verification environment by instantiating and initializing the environm
 ### top_test.sv
 Top-level module that includes the ALU DUT, interface, and test program.
 
-### run_t.do
+### run_c.do
 Script for compiling and running the simulation:
 1. Deletes and recreates the `work` library.
 2. Compiles all source files.
@@ -73,8 +73,8 @@ Script for compiling and running the simulation:
 ## Running the Simulation
 
 1. Ensure that you have a compatible simulation tool installed (e.g., ModelSim or QuestaSim).
-2. Navigate to the directory containing the `run_t.do` script.
+2. Navigate to the directory containing the `run_c.do` script.
 3. Run the simulation using the following command:
    ```bash
-   vsim -do run_t.do
+   do run_c.do
    ```
