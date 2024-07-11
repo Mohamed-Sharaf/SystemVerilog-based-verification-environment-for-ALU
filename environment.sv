@@ -41,11 +41,7 @@ driv.reset();
 $display(" %0d : Environment : end of pre_test() method",$time);
 endtask
 
-  
-  
-  
-  
-  
+
 
 task test;
 	 $display(" %0d : Environment : start of test() method",$time); 
@@ -76,41 +72,3 @@ task run;
 endtask
 
 endclass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
