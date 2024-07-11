@@ -84,3 +84,40 @@ Script for compiling and running the simulation:
 ## Customization
 - To change the number of transactions generated, modify the repeat_count in test.sv.
 - To use a specific random seed, uncomment and modify the -sv_seed line in run_c.do.
+
+    +--------------------+
+    |      Top Test      |
+    | +----------------+ | 
+    | |     Test       | | 
+    | | +------------+ | | 
+    | | | Environment| | | 
+    | | | +--------+ | | | 
+    | | | |Generator| | | | 
+    | | | +---+----+ | | | 
+    | | |     |      | | | 
+    | | |     v      | | | 
+    | | | +-------+  | | | 
+    | | | | Driver|  | | | 
+    | | | +--+----+  | | | 
+    | | |    |       | | | 
+    | | |    v       | | | 
+    | | | +-------+  | | | 
+    | | | | ALU   |  | | | 
+    | | | +-------+  | | | 
+    | | |    |       | | | 
+    | | |    v       | | | 
+    | | | +-------+  | | | 
+    | | | |Monitor|  | | | 
+    | | | +---+---+  | | | 
+    | | |     |      | | | 
+    | | |     v      | | | 
+    | | | +-------+  | | | 
+    | | | |Scorebd | | | | 
+    | | | +---+---+  | | | 
+    | | |     |      | | | 
+    | | |     v      | | | 
+    | | |  Coverage  | | | 
+    | | +------------+ | | 
+    | +----------------+ | 
+    +--------------------+
+
