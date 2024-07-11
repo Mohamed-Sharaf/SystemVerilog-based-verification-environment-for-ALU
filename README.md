@@ -78,3 +78,9 @@ Script for compiling and running the simulation:
    ```bash
    do run_c.do
    ```
+
+`Note: The script will compile all source files, run the simulation, and log the results to testbench_result1.txt.`
+
+## Customization
+- To change the number of transactions generated, modify the repeat_count in test.sv.
+- To use a specific random seed, uncomment and modify the -sv_seed line in run_t.do.
