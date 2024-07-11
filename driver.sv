@@ -60,6 +60,3 @@ task main ();
 	end
 endtask
 endclass 
-
-
-
