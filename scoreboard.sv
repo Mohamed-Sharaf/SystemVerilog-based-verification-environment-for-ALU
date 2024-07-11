@@ -89,8 +89,3 @@ no_trans = no_trans+1;
 end
 endtask
 endclass
-
-
-
-
-
