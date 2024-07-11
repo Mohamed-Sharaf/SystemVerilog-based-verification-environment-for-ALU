@@ -79,7 +79,7 @@ Script for compiling and running the simulation:
    do run_c.do
    ```
 
-`Note: The script will compile all source files, run the simulation, and log the results to testbench_result1.txt. Also, Coverage report to final_report.txt`
+> Note: The script will compile all source files, run the simulation, and log the results to testbench_result1.txt. Also, Coverage report to final_report.txt
 
 ## Customization
 - To change the number of transactions generated, modify the repeat_count in test.sv.
