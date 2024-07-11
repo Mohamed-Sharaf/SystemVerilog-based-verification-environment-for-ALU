@@ -28,11 +28,3 @@ end
 -> ended;
 endtask
 endclass 	
-
-
-
-
-
-
-
-
