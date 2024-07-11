@@ -8,12 +8,12 @@ This repository contains a SystemVerilog-based verification environment for an A
 - [alu.v](/alu.v) : ALU design module.
 - [intf.sv](/intf.sv) : Defines the interface for communication between testbench components.
 - [transaction.sv](/transaction.sv) : Defines the transaction class for data transfer.
+- [generator.sv](/generator.sv) : Generates random transactions.
 - [driver.sv](/driver.sv) : Drives transactions to the ALU.
 - [monitor.sv](/monitor.sv) : Monitors and captures transactions from the ALU.
-- [generator.sv](/generator.sv) : Generates random transactions.
-- [environment.sv](/environment.sv) : Instantiates and connects all components.
 - [coverage.sv](/coverage.sv) : Defines coverage points.
 - [scoreboard.sv](/scoreboard.sv) : Verifies the correctness of ALU operations.
+- [environment.sv](/environment.sv) : Instantiates and connects all components.
 - [test.sv](/test.sv) : Test program to run the verification environment.
 - [top_test.sv](/top_test.sv) : Top-level module for the testbench.
 - [run_c.do](/run_c.do) : Script for running the simulation.
@@ -39,23 +39,23 @@ Defines the interface for ALU signals:
 ### transaction.sv
 Defines the transaction class with randomized fields and constraints.
 
+### generator.sv
+Generates random transactions and sends them to the driver.
+
 ### driver.sv
 Drives transactions to the ALU based on the inputs received from the generator.
 
 ### monitor.sv
 Captures transactions from the ALU and forwards them to the scoreboard for verification.
 
-### generator.sv
-Generates random transactions and sends them to the driver.
-
-### environment.sv
-Instantiates and connects the generator, driver, monitor, and scoreboard.
-
 ### coverage.sv
 Defines coverage points for the verification.
 
 ### scoreboard.sv
 Compares the captured transactions against expected results and reports any discrepancies.
+
+### environment.sv
+Instantiates and connects the generator, driver, monitor, and scoreboard.
 
 ### test.sv
 Runs the verification environment by instantiating and initializing the environment.
@@ -85,6 +85,6 @@ Script for compiling and running the simulation:
 - To change the number of transactions generated, modify the repeat_count in test.sv.
 - To use a specific random seed, uncomment and modify the -sv_seed line in run_c.do.
 
-# Author:
+## Author:
 - [Mohamed Sharaf](sharafm823@gmail.com)
 
