@@ -4,11 +4,11 @@
 This repository contains a SystemVerilog-based verification environment for an Arithmetic Logic Unit (ALU). The environment includes various components such as a driver, monitor, scoreboard, generator, and coverage, integrated to form a comprehensive verification setup.
 
 ## Directory Structure
-- `[macro.sv](/macro.sv)` : Defines macros for ALU operations.
-- `alu.v`: ALU design module.
-- `intf.sv`: Defines the interface for communication between testbench components.
-- `transaction.sv`: Defines the transaction class for data transfer.
-- `driver.sv`: Drives transactions to the ALU.
+- [macro.sv](/macro.sv) : Defines macros for ALU operations.
+- [alu.v](/alu.v) : ALU design module.
+- [intf.sv](/intf.sv) : Defines the interface for communication between testbench components.
+- [transaction.sv](/transaction.sv) : Defines the transaction class for data transfer.
+- [driver.sv](/driver.sv) : Drives transactions to the ALU.
 - `monitor.sv`: Monitors and captures transactions from the ALU.
 - `generator.sv`: Generates random transactions.
 - `environment.sv`: Instantiates and connects all components.
