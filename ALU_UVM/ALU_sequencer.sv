@@ -4,7 +4,7 @@ class ALU_sequencer extends uvm_sequencer#(ALU_transaction);
   //----------------------------------------------------------------------------
 
   //----------------------------------------------------------------------------
-  function new(string name="",uvm_component parent);  
+  function new(string name="ALU_sequencer",uvm_component parent);  
     super.new(name,parent);
   endfunction
   //----------------------------------------------------------------------------

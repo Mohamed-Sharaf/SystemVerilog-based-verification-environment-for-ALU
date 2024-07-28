@@ -18,17 +18,22 @@ virtual intf vif;
 //-------------------------  get interface handel from top -------------------
 function void build_phase(uvm_phase phase);
 super.build_phase(phase);
-if(!(uvm_config_db#(virtual intf)::get(this,"","vif",vif))) begin
-  `uvm_fatal(get_type_name(),"unable to get interface");
-end
+  if(!(uvm_config_db#(virtual intf)::get(this,"","vif",vif))) begin
+    `uvm_fatal(get_type_name(),"unable to get interface");
+  end
 endfunction
 //----------------------------------------------------------------------------
 
 
 //---------------------------- run task --------------------------------------
 task run_phase(uvm_phase phase);
+super.run_phase(phase);
+
 ALU_transaction trans;
 forever begin
+
+  `uvm_info("DRIVER",$sformatf("waiting for data from sequencer"),UVM_MEDIUM)
+
   seq_item_port.get_next_item(trans);
   @(posedge vif.clock);  
   vif.A       <= trans.A;
