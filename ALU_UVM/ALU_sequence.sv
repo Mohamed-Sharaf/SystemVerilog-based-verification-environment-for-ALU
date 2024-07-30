@@ -177,3 +177,37 @@ class ALU_F extends ALU_sequence;
     //----------------------------------------------------------------------------
 
 endclass
+
+
+/***************************************************
+** class name  : ALU reset
+** description : reset 
+***************************************************/
+
+class reset extends ALU_sequence;
+    
+    `uvm_object_utils(reset);
+
+
+    ALU_transaction trans;
+    int loop_count = 2;
+
+
+    //  Constructor: new
+    function new(string name = "reset");
+        super.new(name);
+    endfunction: new
+
+    //----------------------------------------------------------------------------
+    virtual task body();
+        repeat(loop_count)
+        begin
+            trans=ALU_transaction::type_id::create("trans");
+            start_item(trans);
+            assert(trans.randomize() with {trans.reset_n == 0;});
+            finish_item(trans);
+        end  
+    endtask: body
+    //----------------------------------------------------------------------------
+
+endclass
