@@ -27,7 +27,6 @@ endfunction
 
 //---------------------------- run task --------------------------------------
 task run_phase(uvm_phase phase);
-super.run_phase(phase);
 
 ALU_transaction trans;
 forever begin

@@ -5,7 +5,7 @@ class ALU_scoreboard extends uvm_scoreboard;
 `uvm_component_utils(ALU_scoreboard)
   
 
-uvm_analysis_export #(ALU_transaction, ALU_scoreboard) export_mon;
+uvm_analysis_export #(ALU_transaction) export_mon;
 
 uvm_tlm_analysis_fifo #(ALU_transaction) fifo;
 

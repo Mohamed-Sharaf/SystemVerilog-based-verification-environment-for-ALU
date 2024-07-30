@@ -1,7 +1,7 @@
 `ifndef Guard_INTF
 `define Guard_INTF
 
-interface intf (input bit clock);
+interface intf (input bit clk);
   logic [7:0] A, B;
   logic [2:0] op;
   logic reset_n;

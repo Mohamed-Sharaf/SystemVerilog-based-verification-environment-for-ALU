@@ -1,9 +1,9 @@
 `include "intf.sv"
-`include "tb_pkg.sv"
+`include "Test_pkg.sv"
 
 module Top_test;
-  // import uvm_pkg::*;
-  import tb_pkg::*;
+  import uvm_pkg::*;
+  import Test_pkg::*;
   
   bit clk; // external signal declaration
 
@@ -38,13 +38,16 @@ module Top_test;
 
   //----------------------------------------------------------------------------
   initial begin
+    //Registers the Interface in the configuration block so that other
+		//blocks can use it
     uvm_config_db#(virtual intf)::set(uvm_root::get(),"","vif",vif);
   end
   //----------------------------------------------------------------------------
 
   //----------------------------------------------------------------------------
   initial begin
-    run_test("ALU_test");
+    // run_test("ALU_test");
+    run_test();
   end
   //----------------------------------------------------------------------------
 endmodule

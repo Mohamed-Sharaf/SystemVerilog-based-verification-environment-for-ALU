@@ -9,7 +9,7 @@ class ALU_coverage extends uvm_subscriber #(ALU_transaction);;
 //----------------------------------------------------------------------------
 function new(string name="ALU_coverage",uvm_component parent);
   super.new(name,parent);
-  alu_coverage=new();
+  //alu_coverage=new();
 endfunction
 //----------------------------------------------------------------------------
 
@@ -78,5 +78,3 @@ endfunction
 //----------------------------------------------------------------------------
 
 endclass: ALU_coverage
-
-`endif
