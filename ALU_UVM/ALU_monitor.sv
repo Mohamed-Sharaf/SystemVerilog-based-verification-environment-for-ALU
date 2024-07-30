@@ -48,7 +48,7 @@ class ALU_monitor extends uvm_monitor;
 
         forever begin
             wait(vif.reset_n);
-            @(negedge vif.clock);  
+            @(negedge vif.clk);  
                 trans.A       <= vif.A;
                 trans.B       <= vif.B;
                 trans.op      <= vif.op;

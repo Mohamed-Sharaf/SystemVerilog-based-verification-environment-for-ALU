@@ -6,13 +6,6 @@ class ALU_coverage extends uvm_subscriber #(ALU_transaction);;
 `uvm_component_utils(ALU_coverage)
 //----------------------------------------------------------------------------
 
-//----------------------------------------------------------------------------
-function new(string name="ALU_coverage",uvm_component parent);
-  super.new(name,parent);
-  //alu_coverage=new();
-endfunction
-//----------------------------------------------------------------------------
-
 
 ALU_transaction trans;
 real cov;
@@ -54,6 +47,12 @@ bins trans_1_0 = (1 => 0);
 
 endgroup: alu_coverage
 
+//----------------------------------------------------------------------------
+function new(string name="ALU_coverage",uvm_component parent);
+  super.new(name,parent);
+  alu_coverage=new();
+endfunction
+//----------------------------------------------------------------------------
 
 //---------------------  write method ----------------------------------------
 function void write(ALU_transaction t);

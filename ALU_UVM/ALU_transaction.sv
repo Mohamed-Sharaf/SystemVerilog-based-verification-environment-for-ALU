@@ -70,21 +70,11 @@ class ALU_transaction extends uvm_sequence_item;
 
         $sformat(s,
         "%s \n 
-        A \t %0d\n       
-        B \t %0d\n
-        op \t %0d\n
-        reset_n \t %0d\n
-        start \t %0d\n
-        done \t %0d\n
-        result \t %0d\n",
+        A= %b \t\t B= %b \t\t op= %b \t\t reset_n= %b \t\t start= %b
+        done= %b \t\t result= %b\n",
         s,
-        A,      
-        B,      
-        op,     
-        reset_n,
-        start,  
-        done,  
-        result
+        A,      B,      op,     reset_n,    start,  
+        done,        result
         );
 
         return s;
