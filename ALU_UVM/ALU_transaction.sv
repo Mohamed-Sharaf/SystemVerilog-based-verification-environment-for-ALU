@@ -30,11 +30,66 @@ class ALU_transaction extends uvm_sequence_item;
     endfunction: new
 
     //  Function: do_copy
-    // extern function void do_copy(uvm_object rhs);
+    function void do_copy(uvm_object rhs);
+        ALU_transaction rhs_;
+        if(!$cast(rhs_, rhs)) begin
+            uvm_report_error("do_copy:","Cast failed");
+            return;
+        end
+        // super.do_copy(rhs);
+        A       = rhs_.A      ;
+        B       = rhs_.B      ;
+        op      = rhs_.op     ;
+        reset_n = rhs_.reset_n;
+        start   = rhs_.start  ;
+        done    = rhs_.done   ;
+        result  = rhs_.result ;
+    endfunction: do_copy
+
     //  Function: do_compare
-    // extern function bit do_compare(uvm_object rhs, uvm_comparer comparer);
+    function bit do_compare(uvm_object rhs, uvm_comparer comparer);
+        ALU_transaction rhs_;
+        if(!$cast(rhs_, rhs)) begin
+            return 0;
+        end
+        return(//(super.do_compare(rhs, comparer)) &&
+            (A       == rhs_.A      ) &&
+            (B       == rhs_.B      ) &&
+            (op      == rhs_.op     ) &&
+            (reset_n == rhs_.reset_n) &&
+            (start   == rhs_.start  ) &&
+            (done    == rhs_.done   ) &&
+            (result  == rhs_.result )
+        );
+    endfunction: do_compare
+
     //  Function: convert2string
-    // extern function string convert2string();
+    function string convert2string();
+        string s;
+        // s = super.convert2string();
+
+        $sformat(s,
+        "%s \n 
+        A \t %0d\n       
+        B \t %0d\n
+        op \t %0d\n
+        reset_n \t %0d\n
+        start \t %0d\n
+        done \t %0d\n
+        result \t %0d\n",
+        s,
+        A,      
+        B,      
+        op,     
+        reset_n,
+        start,  
+        done,  
+        result
+        );
+
+        return s;
+    endfunction: convert2string
+
     //  Function: do_print
     // extern function void do_print(uvm_printer printer);
     //  Function: do_record
