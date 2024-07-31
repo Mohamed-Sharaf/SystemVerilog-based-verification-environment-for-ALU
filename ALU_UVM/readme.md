@@ -95,8 +95,8 @@ Script for compiling and running the simulation:
 > Note: The script will compile all source files, run the simulation, and log the results to [LOG_FILE.log](./LOG_FILE.log)
 
 ## Customization
-- To change the number of transactions generated, modify the repeat_count in ALU_test.sv.
-- To use a specific random seed, uncomment and modify the -sv_seed line in run.do.
+- To change the number of transactions generated, modify the loop_count for the required sequence in [ALU_test.sv](./ALU_test.sv).
+- To use a specific random seed, uncomment and modify the -sv_seed line in [run.do](./run.do).
 
 ## Author:
 - [Mohamed Sharaf](sharafm823@gmail.com)
