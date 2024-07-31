@@ -4,11 +4,11 @@
 This repository contains a UVM verification environment for an Arithmetic Logic Unit (ALU). The environment includes various components integrated to form a comprehensive verification setup.
 
 ## Directory Structure
-- [macro.sv](/macro.sv) : Defines macros for ALU operations.
-- [alu.v](/alu.v) : ALU design module.
-- [intf.sv](/intf.sv) : Defines the interface for communication between testbench components.
-- [ALU_config.sv](/ALU_config.sv) : Configuration database to store different configuration settings.
-- [ALU_transaction.sv](/ALU_transaction.sv) : Generates stimulus with randomized fields and constraints.
+- [macro.sv](./macro.sv) : Defines macros for ALU operations.
+- [alu.v](./alu.v) : ALU design module.
+- [intf.sv](./intf.sv) : Defines the interface for communication between testbench components.
+- [ALU_config.sv](./ALU_config.sv) : Configuration database to store different configuration settings.
+- [ALU_transaction.sv](./ALU_transaction.sv) : Generates stimulus with randomized fields and constraints.
 - [ALU_sequence.sv](/ALU_sequence.sv) : holds data items that are sent to or received from the driver via the sequencer.
 - [ALU_sequencer.sv](/ALU_sequencer.sv) : establishes a connection between sequence and driver.
 - [ALU_driver.sv](/ALU_driver.sv) : Drives transactions to the ALU.
