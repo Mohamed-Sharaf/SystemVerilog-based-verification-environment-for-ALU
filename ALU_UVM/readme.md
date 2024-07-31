@@ -9,18 +9,18 @@ This repository contains a UVM verification environment for an Arithmetic Logic 
 - [intf.sv](./intf.sv) : Defines the interface for communication between testbench components.
 - [ALU_config.sv](./ALU_config.sv) : Configuration database to store different configuration settings.
 - [ALU_transaction.sv](./ALU_transaction.sv) : Generates stimulus with randomized fields and constraints.
-- [ALU_sequence.sv](/ALU_sequence.sv) : holds data items that are sent to or received from the driver via the sequencer.
-- [ALU_sequencer.sv](/ALU_sequencer.sv) : establishes a connection between sequence and driver.
-- [ALU_driver.sv](/ALU_driver.sv) : Drives transactions to the ALU.
-- [ALU_monitor.sv](/ALU_monitor.sv) : Monitors and captures transactions from the ALU.
-- [ALU_agent.sv](/ALU_agent.sv): Instantiates and connects the driver, monitor, and sequencer instances.
-- [ALU_coverage.sv](/ALU_coverage.sv) : Defines coverage points.
-- [ALU_scoreboard.sv](/ALU_scoreboard.sv) : Verifies the correctness of ALU operations.
-- [ALU_env.sv](/ALU_env.sv) : Instantiates and connects the subscriber, agent, and scoreboard.
-- [ALU_test.sv](/ALU_test.sv) : UVM Test to run the verification environment.
-- [Test_pkg.sv](/Test_pkg.sv) : Container that holds all file names.
-- [Top_test.sv](/Top_test.sv) : Top-level module for the testbench.
-- [run.do](/run.do) : Script for running the simulation.
+- [ALU_sequence.sv](./ALU_sequence.sv) : holds data items that are sent to or received from the driver via the sequencer.
+- [ALU_sequencer.sv](./ALU_sequencer.sv) : establishes a connection between sequence and driver.
+- [ALU_driver.sv](./ALU_driver.sv) : Drives transactions to the ALU.
+- [ALU_monitor.sv](./ALU_monitor.sv) : Monitors and captures transactions from the ALU.
+- [ALU_agent.sv](./ALU_agent.sv): Instantiates and connects the driver, monitor, and sequencer instances.
+- [ALU_coverage.sv](./ALU_coverage.sv) : Defines coverage points.
+- [ALU_scoreboard.sv](./ALU_scoreboard.sv) : Verifies the correctness of ALU operations.
+- [ALU_env.sv](./ALU_env.sv) : Instantiates and connects the subscriber, agent, and scoreboard.
+- [ALU_test.sv](./ALU_test.sv) : UVM Test to run the verification environment.
+- [Test_pkg.sv](./Test_pkg.sv) : Container that holds all file names.
+- [Top_test.sv](./Top_test.sv) : Top-level module for the testbench.
+- [run.do](./run.do) : Script for running the simulation.
 
 ## Components
 
@@ -92,7 +92,7 @@ Script for compiling and running the simulation:
    do run.do
    ```
 
-> Note: The script will compile all source files, run the simulation, and log the results to [LOG_FILE.log](/LOG_FILE.log)
+> Note: The script will compile all source files, run the simulation, and log the results to [LOG_FILE.log](./LOG_FILE.log)
 
 ## Customization
 - To change the number of transactions generated, modify the repeat_count in ALU_test.sv.
