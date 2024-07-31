@@ -47,7 +47,7 @@ class ALU_monitor extends uvm_monitor;
 			(.name("trans"), .contxt(get_full_name()));
 
         forever begin
-            wait(vif.reset_n);
+            // wait(vif.reset_n);
             @(negedge vif.clk);  
                 trans.A       <= vif.A;
                 trans.B       <= vif.B;

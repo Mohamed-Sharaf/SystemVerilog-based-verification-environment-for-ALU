@@ -34,7 +34,7 @@ forever begin
   `uvm_info("DRIVER",$sformatf("waiting for data from sequencer"),UVM_MEDIUM)
 
   seq_item_port.get_next_item(trans);
-  @(posedge vif.clk);  
+  @(negedge vif.clk);  
   vif.A       <= trans.A;
   vif.B       <= trans.B;
   vif.op      <= trans.op;

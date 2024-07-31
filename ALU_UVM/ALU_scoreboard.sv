@@ -43,101 +43,119 @@ forever begin
     `uvm_info("scoreboard run task","WAITING for expected output", UVM_DEBUG)
     fifo.get(transaction);
    
-    if (transaction.start)
-	case(transaction.op)
-		`no_op  : begin
-            if (transaction.done == 1'b0) begin
-                PASS();
-            `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+    if (transaction.reset_n)begin
+        if (transaction.start)
+        case(transaction.op)
+            `no_op  : begin
+                if (transaction.done == 1'b0) begin
+                    PASS();
+                `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+                end
+                else begin
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
+                end
+                // done = 1'b0;
             end
-            else begin
-            ERROR();
-                               
-                `uvm_warning("ERROR",transaction.convert2string())
-            end
-			// done = 1'b0;
-		end
 
-		`add_op : begin 
-            if ((transaction.result == transaction.A + transaction.B) && (transaction.done == 1'b1)) begin
-                PASS();
-            `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+            `add_op : begin 
+                if ((transaction.result == transaction.A + transaction.B) && (transaction.done == 1'b1)) begin
+                    PASS();
+                `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+                end
+                else begin
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
+                end
+                //  result = transaction.A + transaction.B;
+                //  done = 1'b1;
+            end	
+            
+            `and_op : begin
+                if ((transaction.result == {0,(transaction.A & transaction.B)}) && (transaction.done == 1'b1)) begin
+                    PASS();
+                `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+                end
+                else begin
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
+                end
+                // result = transaction.A & transaction.B;
+                // done = 1'b1;
             end
-            else begin
-            ERROR();
-                               
-                `uvm_warning("ERROR",transaction.convert2string())
+            
+            `xor_op : begin     
+                if ((transaction.result == transaction.A ^ transaction.B) && (transaction.done == 1'b1)) begin
+                    PASS();
+                `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+                end        
+                else begin
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
+                end     
+                // result = transaction.A ^ transaction.B;
+                // done = 1'b1;
+            end	
+            
+            `mul_op : begin 
+                if ((transaction.result == transaction.A * transaction.B) && (transaction.done == 1'b1)) begin
+                    PASS();
+                `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+                end 
+                else begin
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
+                end
+                // result = transaction.A * transaction.B; 
+                // done = 1'b1;
+            end	
+            
+            default : begin
+                if (transaction.done == 1'b0) begin
+                    PASS();
+                `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
+                end 
+                else begin
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
+                end
+                // result = result;		 	
+                // done = 1'b0;
             end
-			//  result = transaction.A + transaction.B;
-			//  done = 1'b1;
-		end	
-		
-        `and_op : begin
-            if ((transaction.result == transaction.A & transaction.B) && (transaction.done == 1'b1)) begin
-                PASS();
-            `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
-            end
-            else begin
-            ERROR();
-                               
-                `uvm_warning("ERROR",transaction.convert2string())
-            end
-			// result = transaction.A & transaction.B;
-			// done = 1'b1;
-		end
-		
-        `xor_op : begin     
-            if ((transaction.result == transaction.A ^ transaction.B) && (transaction.done == 1'b1)) begin
-                PASS();
-            `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
-            end        
-            else begin
-            ERROR();
-                               
-                `uvm_warning("ERROR",transaction.convert2string())
-            end     
-			// result = transaction.A ^ transaction.B;
-			// done = 1'b1;
-		end	
-		
-        `mul_op : begin 
-            if ((transaction.result == transaction.A * transaction.B) && (transaction.done == 1'b1)) begin
+        endcase
+
+        else begin
+            if (transaction.done == 0) begin
                 PASS();
             `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
             end 
             else begin
-            ERROR();
-                               
-                `uvm_warning("ERROR",transaction.convert2string())
+                ERROR();
+                                
+                    `uvm_warning("ERROR",transaction.convert2string())
             end
-			// result = transaction.A * transaction.B; 
-			// done = 1'b1;
-		end	
-		
-        default : begin
-            if (transaction.done == 1'b0) begin
-                PASS();
-            `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
-            end 
-            else begin
-            ERROR();
-                               
-                `uvm_warning("ERROR",transaction.convert2string())
-            end
-			// result = result;		 	
-			// done = 1'b0;
-		end
-	endcase
-
+            // done=1'b0;
+            // result = result;
+        end
+    end
     else begin
-        if (transaction.done == 1'b0) begin
+        if (transaction.done == 0 && transaction.result == 0) begin
             PASS();
         `uvm_info ("PASS ",transaction.convert2string() , UVM_MEDIUM)
         end 
-        // done=1'b0;
-        // result = result;
+        else begin
+            ERROR();
+                            
+                `uvm_warning("ERROR",transaction.convert2string())
+        end
     end
-  end
+end
 endtask
 
 function void PASS();
