@@ -1,4 +1,4 @@
-> # ALU Verification Environment
+# ALU Verification Environment
 
 ## Overview
 This repository contains a UVM verification environment for an Arithmetic Logic Unit (ALU). The environment includes various components integrated to form a comprehensive verification setup.
