@@ -1,4 +1,4 @@
-> # [UVM Verification Environment](./ALU_uvm)
+> # [UVM Verification Environment](./ALU_UVM)
 # ALU Verification Environment
 
 ## Overview
