@@ -31,7 +31,8 @@ class ALU_env extends uvm_env;
     //-------------------------- connect phase -----------------------------------
     function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
-        agent_h.monitor_h.alu_mon.connect(coverage_h.analysis_export);
+        // agent_h.monitor_h.alu_mon.connect(coverage_h.analysis_export);
+        agent_h.agent_ap.connect(coverage_h.analysis_export);
 
         agent_h.agent_ap.connect(scoreboard_h.export_mon);
     endfunction
