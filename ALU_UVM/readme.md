@@ -92,7 +92,7 @@ Script for compiling and running the simulation:
    do run.do
    ```
 
-> Note: The script will compile all source files, run the simulation, and log the results to [LOG_FILE.log](./LOG_FILE.log)
+> Note: The script will compile all source files, run the simulation, and log the results to [LOG_FILE.log](./LOG_FILE.log) Also, Coverage report to [final_report.txt](./final_report.txt)
 
 ## Customization
 - To change the number of transactions generated, modify the loop_count for the required sequence in [ALU_test.sv](./ALU_test.sv).
