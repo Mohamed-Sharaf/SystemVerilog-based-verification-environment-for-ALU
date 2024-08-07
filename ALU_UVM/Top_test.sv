@@ -1,3 +1,21 @@
+//-------------------------------------------------------------------------------------------------
+//
+//                                 ALU VERIFICATION
+//
+//-------------------------------------------------------------------------------------------------
+// CREATOR    : Mohamed Sharaf
+// PROJECT    : ALU UVM TEST BENCH
+//-------------------------------------------------------------------------------------------------
+// TITLE      : ALU TOP 
+// DESCRIPTION: THIS TOP MODULE THAT INHERITS THE ALL TESTBENCH COMPONENT AND CONNECT THEM TO DUT.
+//              ALSO INCLUDES THE CLOCK GENERATION MECHANISM.
+//-------------------------------------------------------------------------------------------------
+// LOG DETAILS
+//-------------
+// VERSION          NAME            DATE        DESCRIPTION
+//    1         Mohamed Sharaf    07082024     FILE CREATION
+//-------------------------------------------------------------------------------------------------
+
 `include "intf.sv"
 `include "Test_pkg.sv"
 
