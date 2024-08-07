@@ -31,10 +31,10 @@ This repository contains a UVM verification environment for an Arithmetic Logic 
 |:---:	|:-----------------------------------------------:	|   :------------:| :------------:| :------------:|
 | 1  | Arithmetic Operations: Test addition, and multiplication with various operand values, including edge cases	| Coverage | 100 | Pass |
 | 2  | Logical Operations: Test AND, and XOR operations | Coverage | 100 | Pass |
-| 3  | Combined Operations: Test sequences of operations to ensure correct intermediate results | Coverage | 100 | Pass |
+| 3  | Combined Operations: Test sequences of operations | Coverage | 100 | Pass |
 | 4  | Boundary Conditions: Test operations with maximum and minimum operand values | Coverage | 100 | Pass |
 | 5  | Boundary Conditions: Test operations with zero | Coverage | 100 | Pass |
-| 6  | Result Analysis: Collect and analyze simulation logs and coverage reports |   | 100 | Pass |
+| 6  | Result Analysis: Collect and analyze simulation logs and coverage reports |   |  | Pass |
 ----
 
 - Verification Metrics
