@@ -1,3 +1,21 @@
+//-------------------------------------------------------------------------------------------------
+//
+//                                 ALU VERIFICATION
+//
+//-------------------------------------------------------------------------------------------------
+// CREATOR    : Mohamed Sharaf
+// PROJECT    : ALU UVM TEST BENCH
+//-------------------------------------------------------------------------------------------------
+// TITLE      : ALU SEQUENCE    
+// DESCRIPTION: THIS FILE INCLUDES THE ALL SEQUENCES THAT WOULD BE FORCED INTO DUT. THE SEQUENCES 
+//              MENTIONED BELOW IS IDENTIFIED IN THE MANNER RELATED TO THE VERIFICATION PLAN SECTION
+//-------------------------------------------------------------------------------------------------
+// LOG DETAILS
+//-------------
+// VERSION          NAME            DATE        DESCRIPTION
+//    1         Mohamed Sharaf    07082024     FILE CREATION
+//-------------------------------------------------------------------------------------------------
+
 /***************************************************
 ** class name  : ALU_sequence
 ** description : generate random inputs
