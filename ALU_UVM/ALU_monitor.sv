@@ -1,5 +1,20 @@
-//  Class: ALU_monitor
+//-------------------------------------------------------------------------------------------------
 //
+//                                 ALU VERIFICATION
+//
+//-------------------------------------------------------------------------------------------------
+// CREATOR    : Mohamed Sharaf
+// PROJECT    : ALU UVM TEST BENCH
+//-------------------------------------------------------------------------------------------------
+// TITLE      : ALU Monitor 
+// DESCRIPTION: THIS BLOCK Monitors and captures transactions from the ALU
+//-------------------------------------------------------------------------------------------------
+// LOG DETAILS
+//-------------
+// VERSION          NAME            DATE        DESCRIPTION
+//    1         Mohamed Sharaf    07082024     FILE CREATION
+//-------------------------------------------------------------------------------------------------
+
 class ALU_monitor extends uvm_monitor;
 
     `uvm_component_utils(ALU_monitor)
