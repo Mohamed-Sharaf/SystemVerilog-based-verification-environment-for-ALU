@@ -22,7 +22,7 @@ This repository contains a UVM verification environment for an Arithmetic Logic 
 - [Top_test.sv](./Top_test.sv) : Top-level module for the testbench.
 - [run.do](./run.do) : Script for running the simulation.
 
-# Verification Plan
+## Verification Plan
 > Objective: Verify the functional correctness of the ALU unit.
 
 - Test Scenarios
