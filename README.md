@@ -19,7 +19,7 @@ This repository contains a SystemVerilog-based verification environment for an A
 - [top_test.sv](/top_test.sv) : Top-level module for the testbench.
 - [run_c.do](/run_c.do) : Script for running the simulation.
 
-# Verification Plan
+## Verification Plan
 > Objective: Verify the functional correctness of the ALU unit.
 
 - Test Scenarios
