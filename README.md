@@ -19,6 +19,30 @@ This repository contains a SystemVerilog-based verification environment for an A
 - [top_test.sv](/top_test.sv) : Top-level module for the testbench.
 - [run_c.do](/run_c.do) : Script for running the simulation.
 
+# Verification Plan
+> Objective: Verify the functional correctness of the ALU unit.
+
+- Test Scenarios
+
+|  ID  	|                   Description                   	|               Type       | Goal   |   Result |
+|:---:	|:-----------------------------------------------:	|   :------------:| :------------:| :------------:|
+| 1  | Arithmetic Operations: Test addition, and multiplication with various operand values, including edge cases	| Coverage | 100 | Pass |
+| 2  | Logical Operations: Test AND, and XOR operations | Coverage | 100 | Pass |
+| 3  | Combined Operations: Test sequences of operations | Coverage | 100 | Pass |
+| 4  | Boundary Conditions: Test operations with maximum and minimum operand values | Coverage | 100 | Pass |
+| 5  | Boundary Conditions: Test operations with zero | Coverage | 100 | Pass |
+| 6  | Result Analysis: Collect and analyze simulation logs and coverage reports |   |  | Pass |
+----
+
+- Verification Metrics
+
+|  Metric  	|                   Target Value             	|
+|:---:	|:-----------------------:	|  
+| Code coverage	| 100% |
+| Functional coverage	| 100% |
+| Error detection	| 0 errors |
+----
+
 ## Components
 
 ### macro.sv
