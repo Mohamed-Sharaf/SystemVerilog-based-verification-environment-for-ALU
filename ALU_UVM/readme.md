@@ -29,7 +29,7 @@ This repository contains a UVM verification environment for an Arithmetic Logic 
 
 |  ID  	|                   Description                   	|               Type       | Goal   |   Result |
 |:---:	|:-----------------------------------------------:	|   :------------:| :------------:| :------------:|
-| 1	| 	|   | | |
+| 1	| Arithmetic Operations: Test addition, and multiplication with various operand values, including edge cases.	|   | 100 | Pass |
 | 2  |  |   | | |
 | 3  |   |   | | |
 | 4  |   |   | | |
