@@ -1,5 +1,21 @@
-//  Class: ALU_scoreboard
+//-------------------------------------------------------------------------------------------------
 //
+//                                 ALU VERIFICATION
+//
+//-------------------------------------------------------------------------------------------------
+// CREATOR    : Mohamed Sharaf
+// PROJECT    : ALU UVM TEST BENCH
+//-------------------------------------------------------------------------------------------------
+// TITLE      : ALU SCOREBOARD   
+// DESCRIPTION: SCOREBOARD IS RESPONSIBLE FOR DOING COMPARISONS BETWEEN THE TRANSACTION CREATED IN
+//							THE SEQUENCE AND THE TRANSACTION CAPTURED BY THE MONITOR.
+//-------------------------------------------------------------------------------------------------
+// LOG DETAILS
+//-------------
+// VERSION          NAME            DATE        DESCRIPTION
+//    1         Mohamed Sharaf    07082024     FILE CREATION
+//-------------------------------------------------------------------------------------------------
+
 class ALU_scoreboard extends uvm_scoreboard;
     
 `uvm_component_utils(ALU_scoreboard)
