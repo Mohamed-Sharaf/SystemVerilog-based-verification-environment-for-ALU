@@ -1,5 +1,21 @@
-//  Class: ALU_transaction
+//-------------------------------------------------------------------------------------------------
 //
+//                                 ALU VERIFICATION
+//
+//-------------------------------------------------------------------------------------------------
+// CREATOR    : Mohamed Sharaf
+// PROJECT    : ALU UVM TEST BENCH
+//-------------------------------------------------------------------------------------------------
+// TITLE      : ALU Transaction   
+// DESCRIPTION: THIS FILE INCLUDES MAIN TRANSACTION ATTRIBUTES, CONSTRAINTS, DO_COMPARE AND DO-COPY  
+//              OVERRIDE FUNCTIONS     
+//-------------------------------------------------------------------------------------------------
+// LOG DETAILS
+//-------------
+// VERSION          NAME            DATE        DESCRIPTION
+//    1         Mohamed Sharaf    07082024     FILE CREATION
+//-------------------------------------------------------------------------------------------------
+
 class ALU_transaction extends uvm_sequence_item;
     
     `uvm_object_utils(ALU_transaction);
